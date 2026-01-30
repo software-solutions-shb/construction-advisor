@@ -125,6 +125,31 @@
         <a class="button" href="./submit.html">Submit a Question</a>
       </div>
     </section>
+
+    <section class="section section-alt" id="chat">
+      <div class="container">
+        <h2>Ask Alex (Local demo)</h2>
+        <p>
+          This is a local-only demo chat that sends your question to the FastAPI backend.
+          It is advisory guidance only and does not replace licensed inspections or engineering.
+        </p>
+
+        <div class="chat-container" aria-live="polite">
+          <div class="chat-log" id="chatLog" aria-label="Conversation"></div>
+          <div class="chat-input">
+            <label class="sr-only" for="chatQuestion">Your question</label>
+            <input
+              id="chatQuestion"
+              type="text"
+              placeholder="Type your question..."
+              autocomplete="off"
+            />
+            <button class="button" id="chatSubmit" type="button">Send</button>
+          </div>
+          <p class="small" id="chatStatus" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">

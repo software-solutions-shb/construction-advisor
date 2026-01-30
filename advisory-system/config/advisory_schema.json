@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AdvisoryEntry",
+  "type": "object",
+  "required": [
+    "id",
+    "created_at",
+    "approved_at",
+    "question",
+    "answer",
+    "tags",
+    "risk_level",
+    "reviewer",
+    "source",
+    "images"
+  ],
+  "properties": {
+    "id": { "type": "string", "description": "Unique identifier" },
+    "created_at": { "type": "string", "description": "ISO 8601" },
+    "approved_at": { "type": "string", "description": "ISO 8601" },
+    "question": { "type": "string" },
+    "answer": { "type": "string" },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "risk_level": { "type": "string", "enum": ["low", "medium", "high"] },
+    "reviewer": { "type": "string" },
+    "source": { "type": "string", "description": "Where the question came from" },
+    "images": { "type": "array", "items": { "type": "string" }, "description": "Image references or file names" },
+    "notes": { "type": "string" }
+  }
+}
